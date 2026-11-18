@@ -1,32 +1,21 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#24343c">
   <title>Arrowkeep CTF</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
+  <script src="/socket.io/socket.io.js"></script>
 </head>
 <body>
-  <canvas id="game"></canvas>
-  <div id="vignette"></div>
-  <header id="hud">
-    <div class="team"><span class="dot blue"></span><b id="blueScore">0</b></div>
-    <div id="timer">3:00</div>
-    <div class="team"><b id="redScore">0</b><span class="dot red"></span></div>
-  </header>
-  <div id="crosshair"><span></span><span></span></div>
-  <div id="health"><div id="healthFill"></div></div>
-  <div id="charge"><div id="chargeFill"></div></div>
-  <div id="message"></div>
-  <div id="start">
-    <div class="panel">
-      <h1>ARROWKEEP</h1>
-      <p>Capture the enemy flag and bring it home.</p>
-      <button id="play">Enter Battle</button>
-      <small>WASD move · Mouse aim · Hold/Release click to shoot · Shift run · R respawn</small>
-    </div>
-  </div>
-  <div id="death">You have fallen</div>
+  <canvas id="game" aria-label="Arrowkeep multiplayer game"></canvas>
+  <header id="hud"><div id="blueScore">BLUE 0</div><div id="timer">3:00</div><div id="redScore">RED 0</div></header>
+  <div id="crosshair"><i></i><i></i></div>
+  <div id="healthBar"><div id="healthFill"></div></div>
+  <div id="chargeBar"><div id="chargeFill"></div></div>
+  <div id="notice" role="status"></div>
+  <div id="menu"><section class="panel"><p class="eyebrow">A MEDIEVAL TEAM SKIRMISH</p><h1>ARROWKEEP</h1><p>Steal the enemy banner. Bring it back to your keep.</p><input id="name" maxlength="16" placeholder="Archer name" autocomplete="nickname"><button id="join">ENTER BATTLE</button><small>WASD move · Mouse aim · Hold/release click to shoot · Shift sprint</small><p class="disclaimer">An original, unofficial fan-made game. Not affiliated with Narrow.One.</p></section></div>
   <script type="module" src="game.js"></script>
 </body>
 </html>
