@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Arrowkeep CTF</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="game"></canvas>
+  <div id="vignette"></div>
+  <header id="hud">
+    <div class="team"><span class="dot blue"></span><b id="blueScore">0</b></div>
+    <div id="timer">3:00</div>
+    <div class="team"><b id="redScore">0</b><span class="dot red"></span></div>
+  </header>
+  <div id="crosshair"><span></span><span></span></div>
+  <div id="health"><div id="healthFill"></div></div>
+  <div id="charge"><div id="chargeFill"></div></div>
+  <div id="message"></div>
+  <div id="start">
+    <div class="panel">
+      <h1>ARROWKEEP</h1>
+      <p>Capture the enemy flag and bring it home.</p>
+      <button id="play">Enter Battle</button>
+      <small>WASD move · Mouse aim · Hold/Release click to shoot · Shift run · R respawn</small>
+    </div>
+  </div>
+  <div id="death">You have fallen</div>
+  <script type="module" src="game.js"></script>
+</body>
+</html>
